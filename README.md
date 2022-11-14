@@ -5,4 +5,4 @@ This is the repo to host mutliple site deployments of research conducted in the 
 ## Projects
 
 ### [Noordzij Cube](https://haw-type-design.github.io/noordzij-cube/)
-A 3D model of the Noordzij Cube accessible via the browser. See it from all sides, choose letter orientation and which layers you want to see. A tool to help students at HAW Hamburg understand the Noorzij cube.
+A 3D model of the Noordzij Cube accessible via the browser. See it from all sides, choose letter orientation and which layers you want to see. A tool to help students at HAW Hamburg better understand the Noorzij cube.
