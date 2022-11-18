@@ -11,6 +11,7 @@ body {
     padding: 0;
     font-family: monono;
     font-size: 14px;
+    scroll-behavior: smooth;
 }
 
 #canvas {
