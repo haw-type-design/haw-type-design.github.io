@@ -92,33 +92,44 @@
                 var light2 = new BABYLON.HemisphericLight("light2", new BABYLON.Vector3(-4, 4, -22), scene);
                 var light3 = new BABYLON.HemisphericLight("light3", new BABYLON.Vector3(14, 4, -4), scene);
                 var light4 = new BABYLON.HemisphericLight("light4", new BABYLON.Vector3(-22, 4, -4), scene);
-                light1.intensity = 0.5;
-                light2.intensity = 0.5;
+                var light5 = new BABYLON.HemisphericLight("light5", new BABYLON.Vector3(0, 10, 0), scene);
+                var light6 = new BABYLON.HemisphericLight("light6", new BABYLON.Vector3(0, -10, 0), scene);
+                light1.intensity = 0.6;
+                light2.intensity = 0.6;
                 light3.intensity = 0.4;
                 light4.intensity = 0.4;
+                light5.intensity = 0.5;
+                light6.intensity = 0.6;
+                
+                light1.specular = new BABYLON.Color3.Black()
+                light2.specular = new BABYLON.Color3.Black()
+                light3.specular = new BABYLON.Color3.Black()
+                light4.specular = new BABYLON.Color3.Black()
+                light5.specular = new BABYLON.Color3.Black()
+                
 
                 /* Setting up scene colors */
                 scene.clearColor = new BABYLON.Color3(1, 1, 1);
 
                 var redMat = new BABYLON.StandardMaterial("red", scene);
-                redMat.diffuseColor = new BABYLON.Color3(0.1,0,1);
-                redMat.alpha = 0.9;
+                redMat.diffuseColor = new BABYLON.Color3(0,0.3,0.8);
+                redMat.alpha = 0.98;
 
                 var greenMat = new BABYLON.StandardMaterial("green", scene);
-                greenMat.diffuseColor = new BABYLON.Color3(0.4,0,0.6);
-                greenMat.alpha = 0.9;	
+                greenMat.diffuseColor = new BABYLON.Color3(0.56,0.23,0.7);
+                greenMat.alpha = 0.98;	
 
                 var blueMat = new BABYLON.StandardMaterial("blue", scene);
-                blueMat.diffuseColor = new BABYLON.Color3(0.6,0,0.4);
-                blueMat.alpha = 0.9;
+                blueMat.diffuseColor = new BABYLON.Color3(0.8,0.12,0.17);
+                blueMat.alpha = 0.98;
 
                 var yellowMat = new BABYLON.StandardMaterial("yellow", scene);
-                yellowMat.diffuseColor = new BABYLON.Color3(0.75,0,0.25);
-                yellowMat.alpha = 0.9;
+                yellowMat.diffuseColor = new BABYLON.Color3(0.98,0.26,0.15);
+                yellowMat.alpha = 0.98;
 
                 var lightblueMat = new BABYLON.StandardMaterial("lightblue", scene);
-                lightblueMat.diffuseColor = new BABYLON.Color3(1,0,0);
-                lightblueMat.alpha = 0.9;
+                lightblueMat.diffuseColor = new BABYLON.Color3(1,0.35,0);
+                lightblueMat.alpha = 0.98;
 
                 const cube = await BABYLON.SceneLoader.ImportMeshAsync(
                     "",
@@ -272,13 +283,13 @@
 
                 var transformGroup = new BABYLON.GUI.CheckboxGroup("Toggle layers");
                 transformGroup.addCheckbox(" 1", toggleLayer1, true);
-                transformGroup.selectors[0].color = "red";
+                transformGroup.selectors[0].color = "darkorange";
                 transformGroup.addCheckbox(" 2", toggleLayer2, true);
-                transformGroup.selectors[1].color = "FireBrick";
+                transformGroup.selectors[1].color = "red";
                 transformGroup.addCheckbox(" 3", toggleLayer3, true);
-                transformGroup.selectors[2].color = "DarkMagenta";
+                transformGroup.selectors[2].color = "FireBrick";
                 transformGroup.addCheckbox(" 4", toggleLayer4, true);
-                transformGroup.selectors[3].color = "purple";
+                transformGroup.selectors[3].color = "MediumOrchid";
                 transformGroup.addCheckbox(" 5", toggleLayer5, true);
                 transformGroup.selectors[4].color = "blue";
                 transformGroup.style = style;
