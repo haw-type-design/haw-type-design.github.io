@@ -260,7 +260,7 @@
 
                 var selectBox = new BABYLON.GUI.SelectionPanel("sp");
                 selectBox.width = "440px";
-                selectBox.height = "440px";
+                selectBox.height = "480px";
                 selectBox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
                 selectBox.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
                 selectBox.left = "12px";
@@ -279,7 +279,16 @@
                 style.thickness = 0;
                 selectBox.style = style;
 
-
+                
+                var text0 = new BABYLON.GUI.CheckboxGroup("Cube controls");
+                text0.top = "0px";
+                text0.width = "440px";
+                text0.height = "36px";
+                text0.textHorizontalAlignment = 0;
+                text0.verticalAlignment = 0;
+                text0.thickness = 0;
+                text0.style = style;
+                
 
                 var transformGroup = new BABYLON.GUI.CheckboxGroup("Toggle layers");
                 transformGroup.addCheckbox(" 1", toggleLayer1, true);
@@ -306,7 +315,9 @@
                 rotateGroup.addSlider("Angle", orientateY, "degs", 0, 2 * Math.PI, 0, displayValue);
                 rotateGroup.isThumbCircle = true;
                 rotateGroup.thickness = 0;
+                rotateGroup.left = "0px";
 
+                selectBox.addGroup(text0);
                 selectBox.addGroup(rotateGroup);
                 selectBox.addGroup(transformGroup);
                 selectBox.addGroup(extremesGroup);
