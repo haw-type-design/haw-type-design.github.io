@@ -259,19 +259,20 @@
 
 
                 var selectBox = new BABYLON.GUI.SelectionPanel("sp");
-                selectBox.width = "440px";
-                selectBox.height = "480px";
+                selectBox.width = "460px";
+                selectBox.height = "440px";
                 selectBox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
                 selectBox.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
                 selectBox.left = "12px";
                 selectBox.bottom = "24px";
 
+                
 
-                advancedTexture.addControl(selectBox);
+                
                 var style = advancedTexture.createStyle();
                 style.fontSize = 28;
                 style.fontFamily = "monono";
-                style.textWrapping = true;
+                style.textWrapping = 1;
                 style.textHorizontalAlignment = 0;
                 style.textVerticalAlignment = 0;
                 style.resizeToFit = true;
@@ -279,7 +280,7 @@
                 style.thickness = 0;
                 selectBox.style = style;
 
-                
+
                 var text0 = new BABYLON.GUI.CheckboxGroup("Cube controls");
                 text0.top = "0px";
                 text0.width = "440px";
@@ -288,31 +289,32 @@
                 text0.verticalAlignment = 0;
                 text0.thickness = 0;
                 text0.style = style;
-                
 
-                var transformGroup = new BABYLON.GUI.CheckboxGroup("Toggle layers");
-                transformGroup.addCheckbox(" 1", toggleLayer1, true);
-                transformGroup.selectors[0].color = "darkorange";
-                transformGroup.addCheckbox(" 2", toggleLayer2, true);
-                transformGroup.selectors[1].color = "red";
-                transformGroup.addCheckbox(" 3", toggleLayer3, true);
-                transformGroup.selectors[2].color = "FireBrick";
-                transformGroup.addCheckbox(" 4", toggleLayer4, true);
-                transformGroup.selectors[3].color = "MediumOrchid";
-                transformGroup.addCheckbox(" 5", toggleLayer5, true);
-                transformGroup.selectors[4].color = "blue";
+
+                var transformGroup = new BABYLON.GUI.CheckboxGroup();
+                transformGroup.addCheckbox(" Layer 1", toggleLayer1, true);
+                transformGroup.selectors[0].color = "#FF5900";
+                transformGroup.addCheckbox(" Layer 2", toggleLayer2, true);
+                transformGroup.selectors[1].color = "#FA4226";
+                transformGroup.addCheckbox(" Layer 3", toggleLayer3, true);
+                transformGroup.selectors[2].color = "#CC1E2B";
+                transformGroup.addCheckbox(" Layer 4", toggleLayer4, true);
+                transformGroup.selectors[3].color = "#8F3BB3";
+                transformGroup.addCheckbox(" Layer 5", toggleLayer5, true);
+                transformGroup.selectors[4].color = "#004DCC";
                 transformGroup.style = style;
                 transformGroup.thickness = 0;
+                transformGroup.addCheckbox(" Extremes", showExtremes, false);
 
 
 
-                var extremesGroup = new BABYLON.GUI.CheckboxGroup("Show only extremes");
-                extremesGroup.addCheckbox(" On/Off", showExtremes);
-                extremesGroup.thickness = 0;
+                //var extremesGroup = new BABYLON.GUI.CheckboxGroup("Show only extremes");
+                //extremesGroup.addCheckbox(" On/Off", showExtremes);
+                //extremesGroup.thickness = 0;
 
 
-                var rotateGroup = new BABYLON.GUI.SliderGroup("Rotation of e’s", "S");
-                rotateGroup.addSlider("Angle", orientateY, "degs", 0, 2 * Math.PI, 0, displayValue);
+                var rotateGroup = new BABYLON.GUI.SliderGroup("", "S");
+                rotateGroup.addSlider("Letter rotation", orientateY, "°", 0, 2 * Math.PI, 0, displayValue);
                 rotateGroup.isThumbCircle = true;
                 rotateGroup.thickness = 0;
                 rotateGroup.left = "0px";
@@ -320,13 +322,18 @@
                 selectBox.addGroup(text0);
                 selectBox.addGroup(rotateGroup);
                 selectBox.addGroup(transformGroup);
-                selectBox.addGroup(extremesGroup);
+                //selectBox.addGroup(extremesGroup);
                 selectBox.thickness = 0;
                 selectBox.barHeight = 0;
 
+                
+                console.log(selectBox.groups[2]);
+                
+                advancedTexture.addControl(selectBox);
+
                 var cameraBox = new BABYLON.GUI.SelectionPanel("cp");
                 cameraBox.width = "360px";
-                cameraBox.height = "340px";
+                cameraBox.height = "440px";
                 cameraBox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
                 cameraBox.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
 
@@ -346,7 +353,7 @@
                 var camButton1 = BABYLON.GUI.Button.CreateSimpleButton(showExtremes, "Front");
                 camButton1.height = "50px";
                 camButton1.width = "360px";
-                camButton1.top = "80px";
+                camButton1.top = "96px";
                 camButton1.left = "0px";
                 camButton1.horizontalAlignment = 0;
                 camButton1.verticalAlignment = 0;
@@ -359,7 +366,7 @@
                 var camButton2 = BABYLON.GUI.Button.CreateSimpleButton(showExtremes, "Back");
                 camButton2.height = "50px";
                 camButton2.width = "360px";
-                camButton2.top = "160px";
+                camButton2.top = "192px";
                 camButton2.left = "0px";
                 camButton2.horizontalAlignment = 0;
                 camButton2.verticalAlignment = 0;
@@ -371,7 +378,7 @@
                 var camButton3 = BABYLON.GUI.Button.CreateSimpleButton(showExtremes, "Left");
                 camButton3.height = "50px";
                 camButton3.width = "180px";
-                camButton3.top = "120px";
+                camButton3.top = "144px";
                 camButton3.left = "0px";
                 camButton3.horizontalAlignment = 0;
                 camButton3.verticalAlignment = 0;
@@ -383,7 +390,7 @@
                 var camButton4 = BABYLON.GUI.Button.CreateSimpleButton(showExtremes, "Right");
                 camButton4.height = "50px";
                 camButton4.width = "180px";
-                camButton4.top = "120px";
+                camButton4.top = "144px";
                 camButton4.left = "180px";
                 camButton4.horizontalAlignment = 0;
                 camButton4.verticalAlignment = 0;
@@ -393,7 +400,7 @@
                 camButton4.thickness = 0;
 
                 var camButton5 = BABYLON.GUI.Button.CreateSimpleButton(showExtremes, "Reset");
-                camButton5.top = "240px";
+                camButton5.top = "288px";
                 camButton5.height = "50px";
                 camButton5.width = "360px";
                 camButton5.left = "0px";
@@ -407,26 +414,27 @@
                     }
                     rotateGroup.removeSelector(0);
                     rotateGroup.addSlider("Angle", orientateY, "degs", 0, 2 * Math.PI, 0, displayValue);
-                    for(i = 0; i < 5; i++){
+                    for(i = 0; i < 6; i++){
                         transformGroup.removeSelector(0);
                     }
-                    transformGroup.addCheckbox(" 1", toggleLayer1, true);
-                    transformGroup.selectors[0].color = "darkorange";
-                    transformGroup.addCheckbox(" 2", toggleLayer2, true);
-                    transformGroup.selectors[1].color = "red";
-                    transformGroup.addCheckbox(" 3", toggleLayer3, true);
-                    transformGroup.selectors[2].color = "FireBrick";
-                    transformGroup.addCheckbox(" 4", toggleLayer4, true);
-                    transformGroup.selectors[3].color = "MediumOrchid";
-                    transformGroup.addCheckbox(" 5", toggleLayer5, true);
-                    transformGroup.selectors[4].color = "blue";
-                    extremesGroup.removeSelector(0);
-                    extremesGroup.addCheckbox(" On/Off", showExtremes);
+                    transformGroup.addCheckbox(" Layer 1", toggleLayer1, true);
+                    transformGroup.selectors[0].color = "#FF5900";
+                    transformGroup.addCheckbox(" Layer 2", toggleLayer2, true);
+                    transformGroup.selectors[1].color = "#FA4226";
+                    transformGroup.addCheckbox(" Layer 3", toggleLayer3, true);
+                    transformGroup.selectors[2].color = "#CC1E2B";
+                    transformGroup.addCheckbox(" Layer 4", toggleLayer4, true);
+                    transformGroup.selectors[3].color = "#8F3BB3";
+                    transformGroup.addCheckbox(" Layer 5", toggleLayer5, true);
+                    transformGroup.selectors[4].color = "#004DCC";
+                    transformGroup.addCheckbox(" Extremes", showExtremes, false);
+                    //extremesGroup.removeSelector(0);
+                    //extremesGroup.addCheckbox(" On/Off", showExtremes);
                 });
                 camButton5.thickness = 0;
 
                 var close = BABYLON.GUI.Button.CreateSimpleButton(showExtremes, "Hide Controls");
-                close.top = "290px";
+                close.top = "384px";
                 close.height = "36px";
                 close.width = "360px";
                 close.verticalAlignment = 0;
