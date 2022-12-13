@@ -100,13 +100,13 @@
                 light4.intensity = 0.4;
                 light5.intensity = 0.5;
                 light6.intensity = 0.6;
-                
+
                 light1.specular = new BABYLON.Color3.Black()
                 light2.specular = new BABYLON.Color3.Black()
                 light3.specular = new BABYLON.Color3.Black()
                 light4.specular = new BABYLON.Color3.Black()
                 light5.specular = new BABYLON.Color3.Black()
-                
+
 
                 /* Setting up scene colors */
                 scene.clearColor = new BABYLON.Color3(1, 1, 1);
@@ -260,7 +260,7 @@
 
                 var selectBox = new BABYLON.GUI.SelectionPanel("sp");
                 selectBox.width = "440px";
-                selectBox.height = "480px";
+                selectBox.height = "440px";
                 selectBox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
                 selectBox.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
                 selectBox.left = "12px";
@@ -315,7 +315,7 @@
 
                 var cameraBox = new BABYLON.GUI.SelectionPanel("cp");
                 cameraBox.width = "360px";
-                cameraBox.height = "280px";
+                cameraBox.height = "340px";
                 cameraBox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
                 cameraBox.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
 
@@ -334,7 +334,7 @@
 
                 var camButton1 = BABYLON.GUI.Button.CreateSimpleButton(showExtremes, "Front");
                 camButton1.height = "50px";
-                camButton1.width = "180px";
+                camButton1.width = "360px";
                 camButton1.top = "80px";
                 camButton1.left = "0px";
                 camButton1.horizontalAlignment = 0;
@@ -347,10 +347,10 @@
 
                 var camButton2 = BABYLON.GUI.Button.CreateSimpleButton(showExtremes, "Back");
                 camButton2.height = "50px";
-                camButton2.width = "180px";
-                camButton2.top = "80px";
-                camButton2.left = "90px";
-                camButton2.verticalAlignment = 0;
+                camButton2.width = "360px";
+                camButton2.top = "160px";
+                camButton2.left = "0px";
+                camButton2.horizontalAlignment = 0;
                 camButton2.verticalAlignment = 0;
                 camButton2.onPointerDownObservable.add(function() {
                     camera.setPosition(new BABYLON.Vector3(-4, 4, -22));
@@ -360,7 +360,7 @@
                 var camButton3 = BABYLON.GUI.Button.CreateSimpleButton(showExtremes, "Left");
                 camButton3.height = "50px";
                 camButton3.width = "180px";
-                camButton3.top = "130px";
+                camButton3.top = "120px";
                 camButton3.left = "0px";
                 camButton3.horizontalAlignment = 0;
                 camButton3.verticalAlignment = 0;
@@ -372,7 +372,7 @@
                 var camButton4 = BABYLON.GUI.Button.CreateSimpleButton(showExtremes, "Right");
                 camButton4.height = "50px";
                 camButton4.width = "180px";
-                camButton4.top = "130px";
+                camButton4.top = "120px";
                 camButton4.left = "180px";
                 camButton4.horizontalAlignment = 0;
                 camButton4.verticalAlignment = 0;
@@ -382,17 +382,40 @@
                 camButton4.thickness = 0;
 
                 var camButton5 = BABYLON.GUI.Button.CreateSimpleButton(showExtremes, "Reset");
-                camButton5.top = "180px";
+                camButton5.top = "240px";
                 camButton5.height = "50px";
                 camButton5.width = "360px";
+                camButton5.left = "0px";
+                camButton4.horizontalAlignment = 0;
                 camButton5.verticalAlignment = 0;
                 camButton5.onPointerDownObservable.add(function() {
                     camera.setPosition(new BABYLON.Vector3(10, 20, 10));
+                    for(i = 1; i < scene.meshes.length; i++){
+                        scene.meshes[i].rotation = new BABYLON.Vector3(Math.PI/2, Math.PI/2, Math.PI/2);
+                        scene.meshes[i].setEnabled(true); 
+                    }
+                    rotateGroup.removeSelector(0);
+                    rotateGroup.addSlider("Angle", orientateY, "degs", 0, 2 * Math.PI, 0, displayValue);
+                    for(i = 0; i < 5; i++){
+                        transformGroup.removeSelector(0);
+                    }
+                    transformGroup.addCheckbox(" 1", toggleLayer1, true);
+                    transformGroup.selectors[0].color = "darkorange";
+                    transformGroup.addCheckbox(" 2", toggleLayer2, true);
+                    transformGroup.selectors[1].color = "red";
+                    transformGroup.addCheckbox(" 3", toggleLayer3, true);
+                    transformGroup.selectors[2].color = "FireBrick";
+                    transformGroup.addCheckbox(" 4", toggleLayer4, true);
+                    transformGroup.selectors[3].color = "MediumOrchid";
+                    transformGroup.addCheckbox(" 5", toggleLayer5, true);
+                    transformGroup.selectors[4].color = "blue";
+                    extremesGroup.removeSelector(0);
+                    extremesGroup.addCheckbox(" On/Off", showExtremes);
                 });
                 camButton5.thickness = 0;
 
                 var close = BABYLON.GUI.Button.CreateSimpleButton(showExtremes, "Hide Controls");
-                close.top = "240px";
+                close.top = "290px";
                 close.height = "36px";
                 close.width = "360px";
                 close.verticalAlignment = 0;
