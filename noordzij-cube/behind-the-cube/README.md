@@ -4,9 +4,13 @@ Much has been said about the Noordzij cube. Yet, often you only see its front an
 I will take you into the workshop of mkaing this. From drawing the font to putting it online. So let’s get started:
 
 ## Drawing a font (+ deviation into higher order interpolation)
+![A window of the font editor Glyphs with a lowercase e, drawn with translation contrast](https://user-images.githubusercontent.com/49315922/207306459-c03ba03b-a253-4639-bd92-47f2b1edf2ff.png)
+Drawing the font was pretty straight forward. I examined some source Material — some Noordzij drawing, some covers of »The Stroke«, etc. — and drew the extremes. Yet, when interpolating these extremes, the tail of the e closes quite unpleasently. 
+![A window of FontGoggles showing a wabbly tail of a lowercase e.](./img/linear-interpolation.png)
 
 ## Setting up the cube in Blender (+ ST2)
 
 ## Preparing the web framework (+ Babylon JS)
 
 ## What’s next? (+ How you can play with this)
+
