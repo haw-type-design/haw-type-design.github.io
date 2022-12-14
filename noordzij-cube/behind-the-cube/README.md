@@ -4,6 +4,7 @@ Much has been said about the Noordzij cube. Yet, often you only see its front an
 I will take you into the workshop of mkaing this. From drawing the font to putting it online. So let’s get started:
 
 ## Drawing a font (+ deviation into higher order interpolation) 
+
 ![A window of the font editor Glyphs with a lowercase e, drawn with translation contrast](https://user-images.githubusercontent.com/49315922/207306459-c03ba03b-a253-4639-bd92-47f2b1edf2ff.png)
 Drawing the font was pretty straight forward. I examined some source Material — some Noordzij drawing, some covers of »The Stroke«, etc. — and drew the extremes. Yet, when interpolating these extremes, the tail of the e closes quite unpleasently. 
 ![A window of FontGoggles showing a wabbly tail of a lowercase e.](./img/linear-interpolation.png)
@@ -20,6 +21,12 @@ The Blender files can be found in this repository as well. Feel free to play aro
 The last thing in this step was preparing the 3D file to work on the web. All I had to do was to export the cube as glTF to work in the browser.
 
 ## Preparing the web framework (+ Babylon JS)
+
+Working with 3D files on the web has become increasingly less barrier burden in recent years. For the Noordzij cube I made use of of the [Babylon.js](https://github.com/BabylonJS/Babylon.js) framework to take care of the rendering of the 3D files. This process was pretty much plug and play: Take the 3D file and plug it into the framework to distribute it via the browser. 
+
+Some UI to control both camera angles and the cube was added as well. This step seemed necessary to make full use of the cube: to rotate the e’s so that you could see them always facing you and see both the changes in weight and contrast. Toggling layers seemed to make sense as well to better orientate yourself in 3D space. But go and [have a look!](https://haw-type-design.github.io/noordzij-cube/)
+
+![A browser window showing the 3D Noordzij cube from the top left corner. The e’s are coloured from orange to blue.](./img/web-cube.png)
 
 ## What’s next? (+ How you can play with this)
 
