@@ -30,3 +30,12 @@ Some UI to control both camera angles and the cube was added as well. This step 
 
 ## What’s next? (+ How you can play with this)
 
+Personally, the web cube is already helping us at HAW to better teach the Noordzij cube to students and help them understand the idea of a design space (most literally). However, we are very much interested what this will lead to: what happens if you plug in your own font? Play around with the files? We’re curious about your feedback so please hit us up to let us know what you think!
+
+The repository for the cube can be found [here](https://github.com/haw-type-design/haw-type-design.github.io/tree/main/noordzij-cube) please mess around with it and share your results!
+
+---
+
+> ### About
+>
+> The idea for the cube arose from a discussion between me (Simon Thiefes) and Prof. Pierre Pané-Farré at the HAW Hamburg/Finkenau, when reflecting about how to present and teach the cube to students. We thought it to be necessary to see the back side of the cube, to be able to see it from all sides and move around in a 3D space. Following this discussion in a ping-pong we further developed our first drafts, and I progressively improved my first code sketches. <br>If you find bugs, please report them via GitHub, so we can fix them.
