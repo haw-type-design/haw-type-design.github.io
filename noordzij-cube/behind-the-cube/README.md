@@ -19,20 +19,26 @@ Enter: higher order interpolation or HOI in short. What this allows me to do: ta
 If you want to learn more about the concept of higher order interpolation visit [Underware’s case study](https://underware.nl/case-studies/hoi/) or also Stephen Nixon’s [Higher Order Interpolation experiments](https://github.com/arrowtype/NLI-test).
 
 
+
 ## Setting up the cube in Blender (+ ST2)
 
 Using variable fonts in 3D software can be tedious. Luckily, there’s a little Blender plugin which comes to our help [ST2 (formerly Coldtype)](https://github.com/coldtype/st2) by Rob Stenson. This Plugin made using the font in Blender smooth and easy. The cube was quickly constructed and all I had to do was to iterate through my axes and set every e to its position both in 3D space and in its design space — albeit here both are the same…
-The Blender files can be found in this repository as well. Feel free to play around with them.
+The Blender files can be found in [this repository](../source-files) as well. Feel free to play around with them.
+
 ![A window of Blender showing a cube constructed of lowercase e’s in different constructions following the example of the Noordzij cube.](./img/blender.png)
 The last thing in this step was preparing the 3D file to work on the web. All I had to do was to export the cube as glTF to work in the browser.
+
+
 
 ## Preparing the web framework (+ Babylon JS)
 
 Working with 3D files on the web has become increasingly less barrier burden in recent years. For the Noordzij cube I made use of of the [Babylon.js](https://github.com/BabylonJS/Babylon.js) framework to take care of the rendering of the 3D files. This process was pretty much plug and play: Take the 3D file and plug it into the framework to distribute it via the browser. 
 
-Some UI to control both camera angles and the cube was added as well. This step seemed necessary to make full use of the cube: to rotate the e’s so that you could see them always facing you and see both the changes in weight and contrast. Toggling layers seemed to make sense as well to better orientate yourself in 3D space. But go and [have a look!](https://haw-type-design.github.io/noordzij-cube/)
+Some UI to control both camera angles and the cube was added as well. This step seemed necessary to make full use of the cube: to rotate the e’s so that you could see them always facing you and see both the changes in weight and contrast. Toggling layers seemed to make sense as well to better orientate yourself in 3D space. But go and [have a look at the 3D cube!](https://haw-type-design.github.io/noordzij-cube/)
 
 ![A browser window showing the 3D Noordzij cube from the top left corner. The e’s are coloured from orange to blue.](./img/web-cube.png)
+
+
 
 ## What’s next? (+ How you can play with this)
 
