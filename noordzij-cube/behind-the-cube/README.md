@@ -11,8 +11,11 @@ I will take you into the workshop of making this. From drawing the font to putti
 ![A window of the font editor Glyphs with a lowercase e, drawn with translation contrast](https://user-images.githubusercontent.com/49315922/207306459-c03ba03b-a253-4639-bd92-47f2b1edf2ff.png)
 Drawing the font was pretty straight forward. I examined some source Material — some Noordzij drawing, some covers of »The Stroke«, etc. — and drew the extremes. Yet, when interpolating these extremes, the tail of the e closes quite unpleasently. 
 ![A window of FontGoggles showing a wabbly tail of a lowercase e.](./img/linear-interpolation.png)
-Enter: higher order interpolation or HOI in short. What this allows me to do: tame the tail of the e by defining not only its anchor points but also their movement. This also comes with a little tradeoff of having to introduce two new axes which help me to control the swing of the e’s tail. The glyphs files are available [here] for you to take a look, if you are interested in the concept.
+
+Enter: higher order interpolation or HOI in short. What this allows me to do: tame the tail of the e by defining not only its anchor points but also their movement. This also comes with a little tradeoff of having to introduce two new axes which help me to control the swing of the e’s tail. The glyphs files are available [here](../source-files) for you to take a look, if you are interested in the concept.
+
 ![A window of FontGoggles showing a lowercase e. Two construction helper axes allow to control the tail of the e.](./img/hoi.png)
+
 If you want to learn more about the concept of higher order interpolation visit [Underware’s case study](https://underware.nl/case-studies/hoi/) or also Stephen Nixon’s [Higher Order Interpolation experiments](https://github.com/arrowtype/NLI-test).
 
 
