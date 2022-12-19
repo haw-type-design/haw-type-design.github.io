@@ -112,25 +112,25 @@
                 /* Setting up scene colors */
                 scene.clearColor = new BABYLON.Color3(1, 1, 1);
 
-                var redMat = new BABYLON.StandardMaterial("red", scene);
-                redMat.diffuseColor = new BABYLON.Color3(0,0.3,0.8);
-                redMat.alpha = 0.98;
-
-                var greenMat = new BABYLON.StandardMaterial("green", scene);
-                greenMat.diffuseColor = new BABYLON.Color3(0.56,0.23,0.7);
-                greenMat.alpha = 0.98;	
-
                 var blueMat = new BABYLON.StandardMaterial("blue", scene);
-                blueMat.diffuseColor = new BABYLON.Color3(0.8,0.12,0.17);
+                blueMat.diffuseColor = new BABYLON.Color3(0,0.3,0.8);
                 blueMat.alpha = 0.98;
 
-                var yellowMat = new BABYLON.StandardMaterial("yellow", scene);
-                yellowMat.diffuseColor = new BABYLON.Color3(0.98,0.26,0.15);
-                yellowMat.alpha = 0.98;
+                var purpleMat = new BABYLON.StandardMaterial("purple", scene);
+                purpleMat.diffuseColor = new BABYLON.Color3(0.56,0.23,0.7);
+                purpleMat.alpha = 0.98;	
 
-                var lightblueMat = new BABYLON.StandardMaterial("lightblue", scene);
-                lightblueMat.diffuseColor = new BABYLON.Color3(1,0.35,0);
-                lightblueMat.alpha = 0.98;
+                var redMat = new BABYLON.StandardMaterial("red", scene);
+                redMat.diffuseColor = new BABYLON.Color3(0.8,0.12,0.17);
+                redMat.alpha = 0.98;
+
+                var lightredMat = new BABYLON.StandardMaterial("lightred", scene);
+                lightredMat.diffuseColor = new BABYLON.Color3(0.98,0.26,0.15);
+                lightredMat.alpha = 0.98;
+
+                var orangeMat = new BABYLON.StandardMaterial("orange", scene);
+                orangeMat.diffuseColor = new BABYLON.Color3(1,0.35,0);
+                orangeMat.alpha = 0.98;
 
                 const cube = await BABYLON.SceneLoader.ImportMeshAsync(
                     "",
@@ -144,19 +144,19 @@
                 /*Setting the color of all e’s*/
                 var setColor = async function() {   
                     for(i = 101 ; i < scene.meshes.length; i++){
-                        scene.meshes[i].material = redMat;   
-                    }
-                    for(i = 76 ; i < scene.meshes.length-25; i++){
-                        scene.meshes[i].material = greenMat;   
-                    }
-                    for(i = 51 ; i < scene.meshes.length-50; i++){
                         scene.meshes[i].material = blueMat;   
                     }
+                    for(i = 76 ; i < scene.meshes.length-25; i++){
+                        scene.meshes[i].material = purpleMat;   
+                    }
+                    for(i = 51 ; i < scene.meshes.length-50; i++){
+                        scene.meshes[i].material = redMat;   
+                    }
                     for(i = 26 ; i < scene.meshes.length-75; i++){
-                        scene.meshes[i].material = yellowMat;   
+                        scene.meshes[i].material = lightredMat;   
                     }
                     for(i = 1; i < scene.meshes.length-100; i++){
-                        scene.meshes[i].material = lightblueMat;   
+                        scene.meshes[i].material = orangeMat;   
                     }
                 }
                 await setColor();
