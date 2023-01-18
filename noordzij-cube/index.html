@@ -312,35 +312,30 @@
                     transformGroup.selectors[4].children[0].color = "#004DCC";
                     transformGroup.selectors[4].children[1].color = "#004DCC";
                     transformGroup.addCheckbox(" Extremes", showExtremes, false);
-                    console.log(transformGroup.selectors[0].children[0]._color);
                 }
 
-                //var extremesGroup = new BABYLON.GUI.CheckboxGroup("Show only extremes");
-                //extremesGroup.addCheckbox(" On/Off", showExtremes);
-                //extremesGroup.thickness = 0;
+                
 
 
                 var rotateGroup = new BABYLON.GUI.SliderGroup("", "S");
                 rotateGroup.addSlider("Letter rotation", orientateY, "°", 0, 2 * Math.PI, 0, displayValue);
-                rotateGroup.selectors[0].left = "0px";
+                rotateGroup.selectors[0].children[1].left = "0px";
                 rotateGroup.thickness = 0;
                 rotateGroup.style = style;
                 rotateGroup.horizontalAlignment = 0;
-                rotateGroup.selectors[0].children[1].left = "4px";
-                rotateGroup.selectors[0].children[1].borderColor = "#004DCC";
 
-
-
+                
                 selectBox.addGroup(text0);
                 selectBox.addGroup(rotateGroup);
                 selectBox.addGroup(transformGroup);
-                //selectBox.addGroup(extremesGroup);
                 selectBox.thickness = 0;
                 selectBox.barHeight = 0;
 
 
                 advancedTexture.addControl(selectBox);
                 transformGroupLoader();
+                rotateGroup.selectors[0].backgroundBoxThickness = "4px";
+                
 
                 var cameraBox = new BABYLON.GUI.SelectionPanel("cp");
                 cameraBox.width = "360px";
