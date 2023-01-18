@@ -22,7 +22,7 @@ body {
 }
 .info {
     position: absolute;
-    bottom: 24px;
+    bottom: 18px;
     right: 12px;
     font-family: monono;
     font-size: 14px;
@@ -31,10 +31,10 @@ body {
 #infoPopover {
     visibility: hidden;
     position: absolute;
-    background-color: white;
-    bottom: 96px;
+    background-color: transparent;
+    bottom: 70px;
     width: 480px;
-    right: 12px;
+    right: 8px;
     font-family: monono;
     font-size: 14px;
     padding-left: 24px;
