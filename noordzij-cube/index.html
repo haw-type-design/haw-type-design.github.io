@@ -18,7 +18,7 @@
     <body>
         <canvas id="canvas"></canvas>
 
-        <button class="info" onclick="togglePopover()">Info</button>
+        <button class="info" id="info" onclick="togglePopover()">Info</button>
         <div id="infoPopover" class="" role="dialog">
             <div>
                 <h1>The Noordzij Cube in 3D</h1>
@@ -168,7 +168,8 @@
                     }
                 }
                 var displayValue = function(value) {
-                    return BABYLON.Tools.ToDegrees(value) | 0;
+                    var deg = BABYLON.Tools.ToDegrees(value) | 0;
+                    return (''+ deg + '°');
                 }
 
 
@@ -282,7 +283,7 @@
                 selectBox.style = style;
 
 
-                var text0 = new BABYLON.GUI.CheckboxGroup("Cube controls");
+                var text0 = new BABYLON.GUI.CheckboxGroup("Cube Controls");
                 text0.top = "0px";
                 text0.width = "440px";
                 text0.height = "36px";
@@ -314,17 +315,20 @@
                     transformGroup.addCheckbox(" Extremes", showExtremes, false);
                 }
 
-                
+
 
 
                 var rotateGroup = new BABYLON.GUI.SliderGroup("", "S");
-                rotateGroup.addSlider("Letter rotation", orientateY, "°", 0, 2 * Math.PI, 0, displayValue);
+                rotateGroup.addSlider("Letter Rotation",orientateY,"", 0, 2 * Math.PI, 0, displayValue);
                 rotateGroup.selectors[0].children[1].left = "0px";
+                rotateGroup.selectors[0].children[1].thumbWidth = "24px";
+                rotateGroup.selectors[0].children[1].height = "24px";
+                console.log(rotateGroup.selectors[0])
                 rotateGroup.thickness = 0;
                 rotateGroup.style = style;
                 rotateGroup.horizontalAlignment = 0;
 
-                
+
                 selectBox.addGroup(text0);
                 selectBox.addGroup(rotateGroup);
                 selectBox.addGroup(transformGroup);
@@ -335,26 +339,20 @@
                 advancedTexture.addControl(selectBox);
                 transformGroupLoader();
                 rotateGroup.selectors[0].backgroundBoxThickness = "4px";
-                
+
 
                 var cameraBox = new BABYLON.GUI.SelectionPanel("cp");
                 cameraBox.width = "360px";
                 cameraBox.height = "440px";
                 cameraBox.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
                 cameraBox.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
-
+                cameraBox.right = "0px";
                 cameraBox.style = style;
                 cameraBox.thickness = 0;
+                cameraBox.right = "0px";
 
                 advancedTexture.addControl(cameraBox);
 
-                var text1 = new BABYLON.GUI.TextBlock();
-                text1.text = "Camera controls";
-                text1.top = "24px";
-                text1.width = "360px";
-                text1.height = "36px";
-                text1.verticalAlignment = 0;
-                text1.thickness = 0;
 
                 var camButton1 = BABYLON.GUI.Button.CreateSimpleButton(showExtremes, "Front");
                 camButton1.height = "36px";
@@ -409,8 +407,7 @@
                 camButton5.top = "240px";
                 camButton5.height = "36px";
                 camButton5.width = "360px";
-                camButton5.left = "0px";
-                camButton4.horizontalAlignment = 0;
+                camButton5.horizontalAlignment = 2;
                 camButton5.verticalAlignment = 0;
                 camButton5.onPointerDownObservable.add(function() {
                     camera.setPosition(new BABYLON.Vector3(10, 20, 10));
@@ -419,23 +416,25 @@
                         scene.meshes[i].setEnabled(true); 
                     }
                     rotateGroup.removeSelector(0);
-                    rotateGroup.addSlider("Letter rotation", orientateY, "°", 0, 2 * Math.PI, 0, displayValue);
+                    rotateGroup.addSlider("Letter Rotation", orientateY, "", 0, 2 * Math.PI, 0, displayValue);
+                    rotateGroup.selectors[0].children[1].left = "0px";
+                    rotateGroup.selectors[0].children[1].thumbWidth = "24px";
+                    rotateGroup.selectors[0].children[1].height = "24px";
                     for(i = 0; i < 6; i++){
                         transformGroup.removeSelector(0);
                     }
                     transformGroupLoader();
-                    //extremesGroup.removeSelector(0);
-                    //extremesGroup.addCheckbox(" On/Off", showExtremes);
                 });
                 camButton5.thickness = 0;
 
-                var close = BABYLON.GUI.Button.CreateSimpleButton(showExtremes, "Hide Controls");
-                close.top = "312px";
+                var close = BABYLON.GUI.Button.CreateSimpleButton(showExtremes, "Hide Camera Controls");
+                close.top = "24px";
                 close.height = "36px";
                 close.width = "360px";
                 close.verticalAlignment = 0;
+                close.horizontalAlignment = 0;
+                close.children[0].textHorizontalAlignment = 2;
                 close.onPointerDownObservable.add(function() {
-                    cameraBox.removeControl(text1);
                     cameraBox.removeControl(camButton1);
                     cameraBox.removeControl(camButton2);
                     cameraBox.removeControl(camButton3);
@@ -446,13 +445,14 @@
                 });
                 close.thickness = 0;
 
-                var show = BABYLON.GUI.Button.CreateSimpleButton(showExtremes, "Show Controls");
+                var show = BABYLON.GUI.Button.CreateSimpleButton(showExtremes, "Show Camera Controls");
                 show.top = "24px";
                 show.height = "36px";
                 show.width = "360px";
                 show.verticalAlignment = 0;
+                show.horizontalAlignment = 0;
+                show.children[0].textHorizontalAlignment = 2;
                 show.onPointerDownObservable.add(function() {
-                    cameraBox.addControl(text1);
                     cameraBox.addControl(camButton1);
                     cameraBox.addControl(camButton2);
                     cameraBox.addControl(camButton3);
@@ -463,15 +463,7 @@
                 });
                 show.thickness = 0;
 
-                cameraBox.addControl(text1);
-                cameraBox.addControl(camButton1);
-                cameraBox.addControl(camButton2);
-                cameraBox.addControl(camButton3);
-                cameraBox.addControl(camButton4);
-                cameraBox.addControl(camButton5);
-                cameraBox.addControl(close);
-
-
+                cameraBox.addControl(show);
                 return scene;
             }
 
