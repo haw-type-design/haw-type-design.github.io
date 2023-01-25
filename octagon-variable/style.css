@@ -52,6 +52,9 @@ div:focus {
     padding-bottom: 64px;
     margin-top: -36px;
 }
+.git {
+    margin-top: 0 !important;
+}
 
 .sample-1 {
     border-top: 2px solid;
