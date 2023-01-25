@@ -42,9 +42,9 @@ div:focus {
 
 .sample-0 {
     font-family: Octagon-Variable;
-    overflow: hidden;
+    display: inline-block;
     font-size: 960px;
-    line-height: 0.64;
+    line-height: 1;
     text-align: center;
     width: 100%;
     height: auto;
