@@ -44,13 +44,13 @@ div:focus {
     font-family: Octagon-Variable;
     display: inline-block;
     font-size: 960px;
-    line-height: 1;
+    line-height: 0.9;
     text-align: center;
     width: 100%;
     height: auto;
     max-height: 100vh;
-    padding-bottom: 48px;
-    padding-top: 16px;
+    padding-bottom: 64px;
+    margin-top: -36px;
 }
 
 .sample-1 {
