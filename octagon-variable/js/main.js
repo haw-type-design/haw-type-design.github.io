@@ -67,9 +67,7 @@ function colorize() {
         $("#id"+i+"").css( "color", ""+colors[i]+"");
         $("#id"+i+"").css( "border-color", ""+colors[i]+"");
     }
-    console.log(colors);
     randomize(colors);
-    console.log(colors);
     for(i = 6; i < 13; i++) {
         $("#id"+i+"").css( "color", ""+colors[i%colors.length]+"");
         $("#id"+i+"").css( "border-color", ""+colors[i%colors.length]+"");

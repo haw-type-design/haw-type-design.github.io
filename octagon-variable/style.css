@@ -1,5 +1,5 @@
 @font-face {
-    font-family: octagon;
+    font-family: Octagon-Variable;
     src: url(fonts/OctagonVariableVF.woff2);
 }
 
@@ -14,7 +14,7 @@ html, body {
 }
 
 html {
-    font-family: octagon;
+    font-family: Octagon-Variable;
     height: auto;
     /*background: rgb(34,193,195);
     background: linear-gradient(0deg, rgba(34,193,195,1) 11%, rgba(255,255,255,1) 44%, rgba(255,255,255,1) 57%, rgba(253,187,45,1) 92%);*/
@@ -41,7 +41,7 @@ div:focus {
 }
 
 .sample-0 {
-    font-family: octagon;
+    font-family: Octagon-Variable;
     overflow: hidden;
     font-size: 960px;
     line-height: 0.64;
@@ -55,7 +55,7 @@ div:focus {
 
 .sample-1 {
     border-top: 2px solid;
-    font-family: octagon;
+    font-family: Octagon-Variable;
     overflow: hidden;
     font-size: 388px;
     line-height: 0.64;
@@ -70,7 +70,7 @@ div:focus {
 .sample-2 {
     border-top: 2px solid;
     padding-top: 14px;
-    font-family: octagon;
+    font-family: Octagon-Variable;
     overflow-x: hidden;
     font-size: 244px;
     line-height: 0.64;
@@ -90,7 +90,7 @@ div:focus {
     display: inline-block;
     overflow-x: hidden;
     padding-top: 14px;
-    font-family: octagon;
+    font-family: Octagon-Variable;
     font-size: 168px;
     line-height: 0.68;
     letter-spacing: 0.01em;
@@ -105,7 +105,7 @@ div:focus {
     display: inline-block;
     overflow-x: hidden;
     padding-top: 14px;
-    font-family: octagon;
+    font-family: Octagon-Variable;
     font-size: 98px;
     line-height: 0.64;
     letter-spacing: 0.02em;
@@ -120,7 +120,7 @@ div:focus {
     display: inline-block;
     overflow-x: hidden;
     padding-top: 14px;
-    font-family: octagon;
+    font-family: Octagon-Variable;
     font-size: 48px;
     line-height: 0.76;
     letter-spacing: 0.04em;
