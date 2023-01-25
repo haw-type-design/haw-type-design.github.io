@@ -71,7 +71,7 @@ div:focus {
     border-top: 2px solid;
     padding-top: 14px;
     font-family: Octagon-Variable;
-    overflow-x: hidden;
+    overflow: hidden;
     font-size: 244px;
     line-height: 0.64;
     letter-spacing: 0.005em;
