@@ -1,6 +1,7 @@
 @font-face {
     font-family: Octagon-Variable;
-    src: url(fonts/OctagonVariableVF.woff2);
+    src: url("fonts/OctagonVariableVF.woff2");
+    font-display: swap;
 }
 
 :root {
@@ -14,16 +15,13 @@ html, body {
 }
 
 html {
-    font-family: Octagon-Variable;
     height: auto;
-    /*background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 11%, rgba(255,255,255,1) 44%, rgba(255,255,255,1) 57%, rgba(253,187,45,1) 92%);*/
 }
 
 body {
     overflow-x: hidden;
     overflow-y: scroll;
-    /*background-color: var(--background);*/
+    font-family: Octagon-Variable;
     margin: 12px 8px;
 }
 
