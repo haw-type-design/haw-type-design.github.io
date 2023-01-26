@@ -40,7 +40,7 @@ window.onload = function() {
 }
 
 
-var colors = ['#ff8a58', '#00e7b3', '#ffbf00', '#39ad31', '#7409fc', '#ff1f84'];
+var colors = ['#ff8a58', '#00e7b3', /*'#ffbf00', '#39ad31'*/'#0559ff', '#7409fc', '#ff1f84'];
 
 function randomize(values) {
     let index = values.length,  randomIndex;
@@ -63,12 +63,12 @@ function randomize(values) {
 
 
 function colorize() {
-    for(i = 0; i < 6; i++) {
+    for(i = 0; i < 5; i++) {
         $("#id"+i+"").css( "color", ""+colors[i]+"");
         $("#id"+i+"").css( "border-color", ""+colors[i]+"");
     }
     randomize(colors);
-    for(i = 6; i < 13; i++) {
+    for(i = 5; i < 13; i++) {
         $("#id"+i+"").css( "color", ""+colors[i%colors.length]+"");
         $("#id"+i+"").css( "border-color", ""+colors[i%colors.length]+"");
     }
