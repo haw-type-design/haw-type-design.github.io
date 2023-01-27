@@ -40,7 +40,7 @@ window.onload = function() {
 }
 
 
-var colors = ['#ff8a58', '#00e7b3', /*'#ffbf00', '#39ad31'*/'#0559ff', '#7409fc', '#ff1f84'];
+var colors = ['#E9FF55', '#00E67A', /*'#ffbf00', '#39ad31'*/'#FF8A58', '#7409fc', '#ff1f84'];
 
 function randomize(values) {
     let index = values.length,  randomIndex;
