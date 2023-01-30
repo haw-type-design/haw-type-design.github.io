@@ -40,38 +40,49 @@ window.onload = function() {
 }
 
 
-var colors = ['#ff8a58', '#00e7b3', /*'#ffbf00', '#39ad31'*/'#0559ff', '#7409fc', '#ff1f84'];
+
+
+/* Solution from: https://stackoverflow.com/questions/1484506/random-color-generator */
+
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+var colors = [];
+for(i = 0; i < 5; i++){
+    colors.push(getRandomColor());
+}
 
 function randomize(values) {
     let index = values.length,  randomIndex;
-
     // While there remain elements to shuffle.
     while (index != 0) {
-
         // Pick a remaining element.
         randomIndex = Math.floor(Math.random() * index);
         index--;
-
         // And swap it with the current element.
         [values[index], values[randomIndex]] = [
             values[randomIndex], values[index]];
     }
-
     return values;
 }
 
 
 
 function colorize() {
-    for(i = 0; i < 5; i++) {
-        $("#id"+i+"").css( "color", ""+colors[i]+"");
-        $("#id"+i+"").css( "border-color", ""+colors[i]+"");
-    }
-    randomize(colors);
-    for(i = 5; i < 13; i++) {
+    for(i = 0; i < 13; i++) {
         $("#id"+i+"").css( "color", ""+colors[i%colors.length]+"");
         $("#id"+i+"").css( "border-color", ""+colors[i%colors.length]+"");
+        if (i%colors.length == 0) {
+            randomize(colors);
+        }
     }
+    
 }
 
 function  run(){
