@@ -82,7 +82,6 @@ function colorize() {
             randomize(colors);
         }
     }
-    
 }
 
 function  run(){
