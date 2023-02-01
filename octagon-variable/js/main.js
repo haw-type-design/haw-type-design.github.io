@@ -45,17 +45,26 @@ window.onload = function() {
 /* Solution from: https://stackoverflow.com/questions/1484506/random-color-generator */
 
 function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+function getRandomColorHSL() {
+    var color = 'hsl('+Math.floor(Math.random()*100)+', '+Math.floor(Math.random()*100)+'%, '+Math.floor(Math.random()*100)+'%)';
+    return color;
 }
 
 var colors = [];
 for(i = 0; i < 5; i++){
-    colors.push(getRandomColor());
+    if(i%5==0){
+        colors.push(getRandomColorHSL());
+    } else {
+        colors.push(getRandomColor());
+    }
 }
 
 function randomize(values) {
@@ -82,6 +91,7 @@ function colorize() {
             randomize(colors);
         }
     }
+    console.log(colors);
 }
 
 function  run(){
