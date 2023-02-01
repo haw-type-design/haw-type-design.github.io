@@ -55,4 +55,9 @@ The repository for the cube can be found [here](https://github.com/haw-type-desi
 
 > ### About
 >
-> The idea for the cube arose from a discussion between me (Simon Thiefes) and Prof. Pierre Pané-Farré at the HAW Hamburg/Finkenau, when reflecting about how to present and teach the cube to students. We thought it to be necessary to see the back side of the cube, to be able to see it from all sides and move around in a 3D space. Following this discussion in a ping-pong we further developed our first drafts, and I progressively improved my first code sketches. <br>If you find bugs, please [report them via GitHub](https://github.com/haw-type-design/haw-type-design.github.io/issues), so we can fix them.
+> The *Virtual Noordzij Cube* is an educational type design project developed and published by Prof. Pierre Pané-Farré and Simon Thiefes at the design department of the Hochschule für Angewandte Wissenschaften Hamburg, Finkenau 35, 22081 Hamburg. If you find bugs, please [report them via GitHub](https://github.com/haw-type-design/haw-type-design.github.io/issues), so we can fix them. 
+
+Concept: Pierre Pané-Farré & Simon Thiefes
+Coding: Simon Thiefes
+
+
