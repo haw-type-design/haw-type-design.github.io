@@ -45,7 +45,7 @@ Some UI to control both camera angles and the cube was added as well. This step 
 
 ## What’s next? (+ How you can play with this)
 
-Personally, this web version is already helping us at HAW to better teach the Noordzij cube to students and help them understand the idea of a design space (most literally). However, we are very much interested what this will lead to: what happens if you plug in your own font? Play around with the files? We’re curious about your feedback so please hit us up to [let us know what you think](mailto:simon.thiefes@haw-hamburg.de?subject=Noordzij3D&cc=pierre.pane-farre@haw-hamburg.de)!
+Personally, this web version is already helping us at HAW to better teach the Noordzij cube to students and help them understand the idea of a design space (most literally). However, we are very much interested what this will lead to: what happens if you plug in your own font? Play around with the files? We’re curious about your feedback so please hit us up to [let us know what you think](mailto:simon.thiefes@dmi-haw-hamburg.de?subject=Noordzij3D&cc=pierre.pane-farre@dmi-haw-hamburg.de)!
 
 The repository for the cube can be found [here](https://github.com/haw-type-design/haw-type-design.github.io/noordzij-cube) please mess around with it and share your results!
 
@@ -56,8 +56,7 @@ The repository for the cube can be found [here](https://github.com/haw-type-desi
 > ### About
 >
 > The *Virtual Noordzij Cube* is an educational type design project developed and published by Prof. Pierre Pané-Farré and Simon Thiefes at the design department of the Hochschule für Angewandte Wissenschaften Hamburg, Finkenau 35, 22081 Hamburg. If you find bugs, please [report them via GitHub](https://github.com/haw-type-design/haw-type-design.github.io/issues), so we can fix them. 
-
-Concept: Pierre Pané-Farré & Simon Thiefes
-Coding: Simon Thiefes
+> Concept: Pierre Pané-Farré & Simon Thiefes
+> Coding: Simon Thiefes
 
 
