@@ -55,7 +55,7 @@ The repository for the cube can be found [here](https://github.com/haw-type-desi
 
 > ### About
 >
-> The *Virtual Noordzij Cube* is an educational type design project developed and published by Prof. Pierre Pané-Farré and Simon Thiefes at the design department of the Hochschule für Angewandte Wissenschaften Hamburg. Simon Thiefes took responsibility of the coding. If you find bugs, please [report them via GitHub](https://github.com/haw-type-design/haw-type-design.github.io/issues), so we can fix them.
+> The *Virtual Noordzij Cube* is an educational type design project developed and published by Prof. Pierre Pané-Farré and Simon Thiefes at the design department of the Hochschule für Angewandte Wissenschaften Hamburg. Simon Thiefes took responsibility for the coding. If you find bugs, please [report them via GitHub](https://github.com/haw-type-design/haw-type-design.github.io/issues), so we can fix them.
 
 
 
