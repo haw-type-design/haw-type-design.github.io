@@ -91,7 +91,6 @@ function colorize() {
             randomize(colors);
         }
     }
-    console.log(colors);
 }
 
 function  run(){
