@@ -48,7 +48,7 @@ div:focus {
     height: auto;
     max-height: 100vh;
     padding-bottom: 64px;
-    margin-top: -36px;
+    margin-top: -160px;
 }
 .git {
     margin-top: 0 !important;
@@ -64,7 +64,7 @@ div:focus {
     text-align: center;
     width: 100%;
     height: auto;
-    padding-bottom: 64px;
+    padding-bottom: 80px;
     padding-top: 16px;
 }
 
@@ -79,7 +79,7 @@ div:focus {
     text-align: center;
     width: 100%;
     height: auto;
-    padding-bottom: 48px;
+    padding-bottom: 64px;
 }
 #id8 {
     line-height: 0.78;
@@ -98,7 +98,7 @@ div:focus {
     text-align: center;
     width: 100%;
     height: auto;
-    padding-bottom: 36px;
+    padding-bottom: 44px;
     overflow-y: hidden;
 }
 
@@ -130,7 +130,7 @@ div:focus {
     text-align: center;
     width: 100%;
     height: auto;
-    padding-bottom: 36px;
+    padding-bottom: 20px;
     overflow-y: hidden;
 }
 
@@ -176,7 +176,8 @@ div:focus {
 }
 
 .line-094 {
-       line-height: 0.94 !important;
+    line-height: 0.94 !important;
+    padding-bottom: 16px;
 }
 
 #id10{
@@ -194,53 +195,60 @@ div:focus {
 @media only screen and (max-width: 1600px) {
     .sample-0 {
         font-size: 720px;
+        margin-top: -96px;
     }
 
     .sample-1 {
         font-size: 244px;
         letter-spacing: 0.01em;
+        padding-bottom: 64px;
     }
 
     .sample-2 {
         font-size: 168px;
         letter-spacing: 0.015em;
+        padding-bottom: 48px;
     }
 
 
     .sample-3 {
         font-size: 98px;
         letter-spacing: 0.025em;
+        padding-bottom: 28px;
     }
 
     .sample-4 {
         font-size: 72px;
         line-height: 0.66;
         letter-spacing: 0.04em;
+        padding-bottom: 24px;
     }
 
     .sample-5 {
         font-size: 36px;
         line-height: 0.8;
         letter-spacing: 0.05em;
+        padding-bottom: 16px;
     }
 }
 
 @media only screen and (max-width: 1080px) {
     .sample-0 {
         font-size: 480px;
-        padding-bottom: 24px;
+        padding-bottom: 32px;
+        margin-top: -80px;
     }
 
     .sample-1 {
         font-size: 168px;
         letter-spacing: 0.015em;
-        padding-bottom: 24px;
+        padding-bottom: 48px;
     }
 
     .sample-2 {
         font-size: 98px;
         letter-spacing: 0.025em;
-        padding-bottom: 24px;
+        padding-bottom: 32px;
     }
 
 
@@ -253,26 +261,29 @@ div:focus {
 
     .sample-4 {
         font-size: 64px;
-        padding-bottom: 24px;
+        padding-bottom: 16px;
     }
 
     .sample-5 {
-        padding-bottom: 24px;
+        padding-bottom: 16px;
     }
 }
 
 @media only screen and (max-width: 960px) {
     .sample-0 {
         font-size: 360px;
+        margin-top: -56px;
     }
 
     .sample-1 {
         font-size: 128px;
+        padding-bottom: 44px;
     }
 
     .sample-2 {
         font-size: 80px;
         letter-spacing: 0.025em;
+        padding-bottom: 28px;
     }
 
 
@@ -280,6 +291,7 @@ div:focus {
         font-size: 64px;
         line-height: 0.76;
         letter-spacing: 0.04em;
+        padding-bottom: 24px;
     }
 
     .sample-4 {
@@ -288,6 +300,7 @@ div:focus {
 
     .sample-5 {
         font-size: 24px;
+        padding-bottom: 16px;
     }
 }
 
@@ -295,15 +308,18 @@ div:focus {
 @media only screen and (max-width: 580px) {
     .sample-0 {
         font-size: 280px;
+        margin-top: -36px;
     }
 
     .sample-1 {
         font-size: 96px;
+        padding-bottom: 36px;
     }
 
     .sample-2 {
         font-size: 72px;
         letter-spacing: 0.025em;
+        padding-bottom: 32px;
     }
 
 
@@ -325,15 +341,18 @@ div:focus {
 @media only screen and (max-width: 440px) {
     .sample-0 {
         font-size: 220px;
+        margin-top: -24px;
     }
 
     .sample-1 {
         font-size: 80px;
+        padding-bottom: 32px;
     }
 
     .sample-2 {
         font-size: 64px;
         letter-spacing: 0.025em;
+        padding-bottom: 28px;
     }
 
 
@@ -346,6 +365,35 @@ div:focus {
 
     .sample-4 {
         font-size: 36px;
+        padding-bottom: 28px;
+    }
+
+    .sample-5 {
+        padding-bottom: 16px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .sample-0 {
+        font-size: 172px;
+        margin-top: -12px;
+    }
+
+    .sample-1 {
+        font-size: 58px;
+        padding-bottom: 28px;
+    }
+
+    .sample-2 {
+        font-size: 48px;
+        padding-bottom: 28px;
+    }
+    .sample-3 {
+        font-size: 40px;
+        padding-bottom: 20px;
+    }
+    .sample-4 {
+        font-size: 32px;
         padding-bottom: 16px;
     }
 
