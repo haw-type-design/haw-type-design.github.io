@@ -4,6 +4,11 @@ This is the repo to host mutliple site deployments of research conducted in the 
 
 ## Projects
 
+### [Octagon Variable](https://haw-type-design.github.io/octagon-variable/)
+Octagon Variable — a project at the HAW/Finkenau in Hamburg as part of the first year type design introduction class under the guidance of Prof. Pierre Pané-Farré and Simon Thiefes. 
+
+---
+
 ### [Noordzij Cube](https://haw-type-design.github.io/noordzij-cube/)
 A 3D model of the Noordzij Cube accessible via the browser. See it from all sides, choose letter orientation and which layers you want to see. A tool to help students at HAW Hamburg better understand the Noorzij cube.
 
