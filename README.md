@@ -13,3 +13,10 @@ Octagon Variable — a project at the HAW/Finkenau in Hamburg as part of the fir
 A 3D model of the Noordzij Cube accessible via the browser. See it from all sides, choose letter orientation and which layers you want to see. A tool to help students at HAW Hamburg better understand the Noorzij cube.
 
 The pipeline to produce this cube looked as follows: a variable font with one HOI axis, designed in Glyphs > Blender + ST2 to create the 3D cube, export as .glb >  Babylon.js + HTML to create the interface and 3D environment. A full story on the process can be read [here](https://haw-type-design.github.io/noordzij-cube/behind-the-cube/).
+
+---
+
+### Courses
+
+#### [Shape Shifters](https://haw-type-design.github.io/shape-shifters/)
+The student work of a course on reacting on a text with a variable font.
